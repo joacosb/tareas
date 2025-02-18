@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color: #000;
+	background: #332F29;
+	font-size: 100%;
+}
+
+#contenedor {
+	width: 800px;
+	background: #8FA68E;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+
+/* Esto del doc base es para el diseno normal */
+nav {
+	background: #CC3910;
+	float: left;
+	width: 160px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: #F1F2C0;
+	text-decoration: none;
+}
+
+section {
+	background: #F1F2C0;
+	float: left;
+	margin: 0 0 0 25px;
+	width: 400px;
+}
+
+aside {
+	background: #CCC59E;
+	float: right;
+	width: 190px;
+}
+
+@media screen and (max-width:800px) {
+	#contenedor {
+		width: 100%;
+	}
+
+	nav,
+	section,
+	aside {
+		float: none;
+		/* el float eliminado hace que se puedan apliar usando el 100% del ancho cada uno */
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* cambio los estilos para que coincidan con los de la imagen */
+
+	nav {
+		background-color: #f4a33d;
+		padding: 10 px 0;
+		text-align: center;
+	}
+
+	nav li {
+		display: block;
+		padding: 5px;
+
+	}
+
+	nav ul {
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		color: #000;
+
+	}
+
+	section {
+		background: #F1F2C0;
+		padding: 15px;
+		margin: 0;
+	}
+	/* Deje margin y padding 0 para que se toquen las diferentes secciones */
+
+	aside {
+		background: #CCC59E;
+		padding: 15px;
+	}
+
+	h1 {
+		font-size: 1.8em;
+		text-align: left;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+}
