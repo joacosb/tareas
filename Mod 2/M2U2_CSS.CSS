@@ -1,0 +1,76 @@
+/* Le aplique estas propiedades al body para que el cuadrado contenedor quede centrado */
+body {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Hace que el body ocupe toda la pantalla */
+    margin: 0;
+}
+/* Inicio Ejercicio 1 */
+  /* defini el tamano de la caja para que coincidan con las imagenes de los ejercicios */
+ /* 
+ .contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    background-color: white;
+}
+  */
+
+/* Fin de ejercicio 1 */
+
+
+/* Inicio ejercicio 2 */
+/* 
+.contenedor{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    background-color: white;
+}
+ */
+
+/* Fin ejercicio 2 */
+
+/* Inicio ejercicio 3 */
+
+/* No pude hacer que no quede pegado al lado derecho */
+.contenedor{
+    display: flex ;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    background-color: white;
+    justify-content: space-between;
+    top: 5px;
+    left: 5px;
+    position:fixed;
+}
+
+/* Fin ejercicio 3 */
+
+/* El tamano de los items y sus cualidades son las mismas para los 3 ejercicios */
+.item {
+    width: 100px;
+    height: 100px;
+    font-size: 15px;
+    display: flex; 
+    /* Para centrar contenido en el eje horizontal*/
+    align-items: center;
+/* Para centrar el contenido en el eje vertical de los cuadrados */
+    justify-content: center;
+    color: white;
+}
+
+.item1 { background-color: red; }
+.item2 { background-color: blue; }
+.item3 { background-color: green; }
