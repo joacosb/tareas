@@ -8,21 +8,36 @@ body {
 }
 
 /* Header */
-header {
+/* header {
     background-color: white;
     padding: 16px 0;
     border-bottom: 2px solid #ccc; /* Opcional, da un mejor diseño */
+/* }  */
+
+/* Estilos del header con imagen de fondo */
+/* Header ocupa todo el ancho y es más angosto */
+.header {
+    width: 100%; /* Ocupa todo el ancho */
+    background-image: url('img/horizonte.jpg'); /* Ruta correcta */
+    background-size: cover; /* Ajusta la imagen sin distorsión */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px; /* Ajusta la altura para hacerlo más angosto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Logo responsivo */
 .header img {
     max-width: 100%;
-    height: auto;
+    height: 60%;
+    border-radius: 90%;
 }
 
 /* Títulos */
 .header-title {
-    color: #d28b6a;
+    color: rgb(48, 40, 40);
     font-size: 40px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +45,7 @@ header {
 }
 
 .header-subtitle {
-    color: #555;
+    color: black;
     font-size: 18px;
     font-weight: normal;
     margin: 5px 0 0 0;
