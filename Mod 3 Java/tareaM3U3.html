@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Modulo 3 Unidad 3 y 4
+    </title>
+</head>
+
+<body>
+    <script>
+        /* Ejericio 1
+
+Crear el código que dada una distancia determine el medio de transporte apropiado de acuerdo a las siguientes reglas:
+0 a 1000 metros = pie
+1000 a 10000 metros = bicicleta
+10000 a 30000 metros = colectivo
+30000 a 100000 metros = auto
++100000 = avion
+*/
+        let distancia = 200000;
+        if (distancia <= 1000) {
+            console.log("Pie");
+        }
+        else if (distancia <= 10000) {
+            console.log("Bicicleta")
+        }
+        else if (distancia <= 30000) {
+            console.log("Colectivo")
+        }
+        else if (distancia <= 100000) {
+            console.log("Auto")
+        }
+        else {
+            console.log("Avion")
+        }
+
+
+        /*Ejericio 2
+        
+        Crear el código que reciba como parámetro un array de números y devuelva el mayor */
+
+        array1 = [5, 4, 3, 2, 8]; //Lo agregue para poder ir validando
+        function devolverMayor(array) {
+            let mayor = array[0]; //Inicializo esta variable con el primer elemento
+            for (let num of array) { //En js acordarme de que se usa for ... of para recorrer valores
+                if (num > mayor) {
+                    mayor = num
+                }
+            }
+            console.log(mayor)
+        }
+        devolverMayor(array1)
+
+    </script>
+</body>
+
+</html>
