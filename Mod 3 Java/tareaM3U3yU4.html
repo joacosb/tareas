@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Modulo 3 Unidad 3 y 4
+    </title>
+</head>
+
+<body>
+    <!-- Esta parte del codigo, fuera del script, corresponde a los ejercicio del modulo 3 unidad 4 -->
+    <!-- El css lo hago aca porque es corto el ejercicio y no requiere de mucho codigo. -->
+    <style>
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 20;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 5px black;
+        }
+
+        #rojo {
+            background-color: red;
+        }
+
+        #verde {
+            background-color: green;
+        }
+
+        #azul {
+            background-color: blue;
+        }
+    </style>
+    <div class="contenedor">
+        <div id="rojo" class="box"></div>
+        <div id="verde" class="box"></div>
+        <div id="azul" class="box"></div>
+    </div>
+
+    <div>
+        <textarea id="TA" rows="5" cols="40" placeholder="Escribe aquí..."></textarea>
+        <p id="contador">Caracteres: 0</p>
+
+    </div>
+    <script>
+        /* ACA EMPIEZA MODULO 3 UNIDAD 3 
+        Ejericio 1
+
+Crear el código que dada una distancia determine el medio de transporte apropiado de acuerdo a las siguientes reglas:
+0 a 1000 metros = pie
+1000 a 10000 metros = bicicleta
+10000 a 30000 metros = colectivo
+30000 a 100000 metros = auto
++100000 = avion
+*/
+        let distancia = 200000;
+        if (distancia <= 1000) {
+            console.log("Pie");
+        }
+        else if (distancia <= 10000) {
+            console.log("Bicicleta")
+        }
+        else if (distancia <= 30000) {
+            console.log("Colectivo")
+        }
+        else if (distancia <= 100000) {
+            console.log("Auto")
+        }
+        else {
+            console.log("Avion")
+        }
+
+
+        /*Ejericio 2
+        
+        Crear el código que reciba como parámetro un array de números y devuelva el mayor */
+
+        array1 = [5, 4, 3, 2, 8]; //Lo agregue para poder ir validando
+        function devolverMayor(array) {
+            let mayor = array[0]; //Inicializo esta variable con el primer elemento
+            for (let num of array) { //En js acordarme de que se usa for ... of para recorrer valores
+                if (num > mayor) {
+                    mayor = num
+                }
+            }
+            console.log(mayor)
+        }
+        devolverMayor(array1)
+
+
+        /* ACA EMPIEZAN LOS EJERCICIOS DEL MODULO 3 UNIDAD 4.
+        Ejercicio 1:
+        
+        Crear un documento html con 3 cuadrados que, al ser clickeados, cambien el color de fondo del documento. Cada cuadrado debera tener un color distinto.
+        */
+        function cambiarFondo(color) {
+            document.body.style.backgroundColor = color
+        }
+        //    Aca asigno un evento de click a cada cuadrado
+        document.getElementById("rojo").addEventListener("click", function () {
+            cambiarFondo("red");
+        })
+        // Use el getElementById pero podria usarse por clase en otros casos, o por el identificador que desee. El addEventListener es util para agregar eventos a elementos de html. al llamarlo primero se declara el evento y luego que debe pasar cuando ocurre. En este caso el elemento surge de la "subconsulta" del getElementById
+        document.getElementById("azul").addEventListener("click", function () {
+            cambiarFondo("blue");
+        })
+        document.getElementById("verde").addEventListener("click", function () {
+            cambiarFondo("green");
+        })
+
+        /*Ejercicio 2:
+        
+        Programar un contador de caracteres para un textarea.
+        // El text area esta identificado con un id llamado TA. El contador con uno que se llama contador.
+        */
+        function counter(textareaId, contadorId) {
+            let textarea = document.getElementById(textareaId); //captura el text area
+            let contador = document.getElementById(contadorId); //captura el p del contador
+            if (textareaId && contadorId) {  // Me aseguro de que ambos existen antes de usarlo
+                let acumulador = textarea.value.length || 0; // Si no hay texto, devuelve 0
+                contador.textContent = "Caracteres: " + acumulador; // Actualiza el contador
+            }
+        }
+        document.getElementById("TA").addEventListener("input", function () {
+            counter("TA", "contador")
+        })
+        /*
+        Ejercicio 3:
+        
+        Dado el siguiente array de alumnos utilizar los métodos de array vistos para generar un array con los alumnos aprobados. Se considera aprobado todo alumno que tenga una nota mayor o igual a 7. Copie aca el codigo pero por una cuestion de orden, en realidad deberia ir todo en el 
+        */
+        function soloAprobados(alumnos) {
+            return alumnos.filter(alumno => alumno.nota >= 7);
+        }
+
+        var alumnos = [
+            { nombre: 'Juan Gomez', nota: 7 },
+            { nombre: 'Pedro Rodriguez', nota: 4 },
+            { nombre: 'Roxana García', nota: 8 },
+            { nombre: 'Luciano Lopez', nota: 5 },
+            { nombre: 'Fernanda Gimenez', nota: 6 },
+            { nombre: 'Florencia Martinez', nota: 10 },
+            { nombre: 'Raul Sanchez', nota: 7 },
+            { nombre: 'Sandra Figueroa', nota: 8 }
+        ];
+        let aprobados = soloAprobados(alumnos);
+        console.log(aprobados);
+
+    </script>
+</body>
+
+</html>
